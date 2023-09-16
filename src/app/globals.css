@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    overflow-x: hidden !important;
+  }
+  
+  ._container{
+    max-width: 1444px;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin: auto;
+  }
+  .side-cart {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -400px; /* Adjust this value for the desired width */
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  .side-cart.open {
+    right: 0;
+  }
+  .side-cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+
+  @media screen and(max-width:768px) {
+    ._container{
+      max-width: 100%;
+      padding-left: 4%;
+      padding-right: 4%;
+      margin: auto;
+    }
+  }
